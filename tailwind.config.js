@@ -4,7 +4,14 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        "nouns-bg-blue": "#3E64FF",
+        "nouns-bg-grey": "#F2F2F2",
+        "nouns-blue": "#002AFF",
+        "nouns-grey": "#7A7A7A",
+        "nouns-yellow": "#FDF45F",
+        "nouns-darkblue": "#1F1D28",
+      },
     },
     screens: {
       xs: "200px",

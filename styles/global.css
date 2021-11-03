@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-nouns {
+  font-family: "Londrina Solid", sans-serif;
+}
+
+.text-nouns {
+  font-family: "Londrina Solid", sans-serif;
+}
+
+.text-dm {
+  font-family: "DM Sans", sans-serif;
+}
