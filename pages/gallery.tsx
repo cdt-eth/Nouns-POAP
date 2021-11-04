@@ -10,12 +10,12 @@ const Gallery = () => {
         <Nav dark={true} gallery />
         <div className="flex xs:flex-col sm:gap-4 sm:flex-row xs:mb-4 sm:mb-10 xs:text-center">
           <div className="text-nouns header">Gallery</div>
-          <p className="xs:pt-4 sm:pt-0 sm:self-end sm:pb-16">
+          <p className="xs:pt-4 sm:pt-0 sm:self-end sm:pb-16 text-dm">
             Previous POAP Winners
           </p>
         </div>
 
-        <div className="flex flex-wrap flex-row border-b border-nouns-yellow border-opacity-20">
+        <div className="flex flex-wrap flex-row border-b border-nouns-yellow border-opacity-20 font-bold text-dm">
           <Card />
           <Card />
           <Card />

@@ -1,6 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "DMSans-Regular";
+  src: url("/fonts/DMSans-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DMSans-Medium";
+  src: url("/fonts/DMSans-Medium.ttf");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
 
 .text-nouns {
   font-family: "Londrina Solid", sans-serif;
@@ -11,7 +28,8 @@
 }
 
 .text-dm {
-  font-family: "DM Sans", sans-serif;
+  font-family: DM Sans;
+  font-family: "DM Sans";
 }
 
 .header {
@@ -28,4 +46,9 @@
 
 .card:nth-child(even) {
   border-right: 0px;
+}
+
+p {
+  font-family: DM Sans;
+  font-family: "DM Sans";
 }

@@ -6,7 +6,7 @@ const Card = () => {
       <h2 className="text-nouns xs:text-3xl sm:text-5xl xs:mb-4 sm:mb-10">
         Noun 90 POAP
       </h2>
-      <div className="text-xs leading-loose opacity-75">
+      <div className="text-xs leading-loose opacity-75 font-bold text-dm">
         <p>cdt.eth</p>
         <p>cdt.eth</p>
         <p>cdt.eth</p>
