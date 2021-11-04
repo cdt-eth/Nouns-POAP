@@ -12,9 +12,7 @@ const Card = ({ number, bidder }: CardProps) => {
         Noun {number} POAP
       </h2>
       <div className="text-xs leading-loose opacity-75 font-bold text-dm">
-        {bidder.map((a) => (
-          <p> {a.address}</p>
-        ))}
+        {bidder && bidder.map((a) => <p> {a.address}</p>)}
       </div>
     </div>
   );

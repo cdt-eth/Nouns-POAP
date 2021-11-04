@@ -9,7 +9,6 @@ import auctionData from "./api/auctions.json";
 const Gallery = () => {
   const [auctions, setAuctions] = useRecoilState(auctionsState);
 
-  auctionData && console.log("auctions", auctionData);
   auctionData && setAuctions(auctionData);
 
   return (
