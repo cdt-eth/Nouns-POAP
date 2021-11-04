@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import { auctionsState } from "../atoms";
 import { useRecoilState } from "recoil";
 import auctionData from "./api/auctions.json";
+import Head from "next/head";
 
 const Gallery = () => {
   const [auctions, setAuctions] = useRecoilState(auctionsState);
@@ -13,7 +14,6 @@ const Gallery = () => {
 
   return (
     <div className=" min-h-screen bg-nouns-bg-darkblue">
-      []{" "}
       <div className="xs:w-10/12 sm:w-9/12 m-auto text-nouns-yellow xs:pb-10 sm:pb-20">
         <Nav dark={true} gallery />
         <div className="flex xs:flex-col sm:gap-4 sm:flex-row xs:mb-4 sm:mb-10 xs:text-center">
