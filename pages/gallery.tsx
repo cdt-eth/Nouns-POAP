@@ -1,12 +1,13 @@
 import React from "react";
 import Card from "./components/Card";
+import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 
 const Gallery = () => {
   return (
     <div className=" min-h-screen bg-nouns-bg-darkblue">
       <div className="xs:w-10/12 sm:w-9/12 m-auto text-nouns-yellow xs:pb-10 sm:pb-20">
-        <Nav dark={true} page="gallery" />
+        <Nav dark={true} gallery />
         <div className="flex xs:flex-col sm:flex-row xs:mb-4 sm:mb-10 xs:text-center">
           <div className="text-nouns xs:text-6xl sm:text-9xl sm:header">
             Gallery
@@ -23,6 +24,7 @@ const Gallery = () => {
           <Card />
         </div>
       </div>
+      <Footer dark={true} gallery />
     </div>
   );
 };

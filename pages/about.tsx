@@ -1,11 +1,12 @@
 import React from "react";
+import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-nouns-bg-blue text-white">
       <div className="xs:w-10/12 sm:w-9/12 m-auto">
-        <Nav dark={true} page="about" />
+        <Nav dark={true} />
         <div className="">
           <div className="text-nouns xs:text-3xl sm:text-6xl sm:w-8/12 leading-tight">
             Every auction participant, win or lose, shapes, the future of the
@@ -84,6 +85,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <Footer dark={true} />
     </div>
   );
 };
