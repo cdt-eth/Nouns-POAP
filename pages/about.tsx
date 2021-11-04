@@ -5,7 +5,7 @@ import Nav from "./components/Nav";
 const About = () => {
   return (
     <div className="min-h-screen bg-nouns-bg-blue text-white">
-      <div className="xs:w-10/12 sm:w-9/12 m-auto">
+      <div className="xs:w-11/12 sm:w-9/12 m-auto">
         <Nav dark={true} />
         <div className="">
           <div className="text-nouns xs:text-3xl sm:text-6xl sm:w-8/12 leading-tight">
@@ -27,7 +27,7 @@ const About = () => {
         <img src="./group.png" alt="" />
       </div>
 
-      <div className="xs:w-10/12 sm:w-9/12 m-auto">
+      <div className="xs:w-11/12 sm:w-9/12 m-auto">
         <div className="flex xs:flex-col sm:flex-row justify-between align-center">
           <div className="text-nouns xs:text-5xl sm:text-6xl">How it works</div>
           <div className="text-dm sm:w-1/3 flex-end xs:pt-4 sm:pt-0">

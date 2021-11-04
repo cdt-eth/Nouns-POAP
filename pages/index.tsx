@@ -5,57 +5,68 @@ import { format } from "date-fns";
 import Bidder from "./components/Bidder";
 import Footer from "./components/Footer";
 import Link from "next/link";
-import { useRecoilValue } from "recoil";
-import { auctionNumber } from "../atoms";
+import { useRecoilState } from "recoil";
+import { auctionsState } from "../atoms";
+import auctionData from "./api/auctions.json";
+import { v4 as uuidv4 } from "uuid";
 
 const Home = () => {
-  const auction = useRecoilValue(auctionNumber);
+  const [auctions, setAuctions] = useRecoilState(auctionsState);
+
+  auctionData && setAuctions(auctionData);
+
+  auctions && console.log(auctions[0].bids);
 
   return (
     <div className="min-h-screen bg-nouns-bg-grey">
       <Header />
-
-      <div className="xs:w-10/12 sm:w-9/12 m-auto">
+      <div className="xs:w-11/12 sm:w-9/12 m-auto">
         <Nav dark={false} />
 
-        <div>
-          <p className="text-nouns text-black header text-center">
-            Noun {auction} POAP
-          </p>
-        </div>
+        {auctions && (
+          <>
+            <div>
+              <p className="text-nouns text-black header text-center">
+                Noun {auctions[0].auction} POAP
+              </p>
+            </div>
 
-        <div className="text-center sm:-mt-10	">
-          <p>{format(new Date(), "PP")}</p>
-        </div>
+            <div className="text-center sm:-mt-10	">
+              <p>{format(new Date(), "PP")}</p>
+            </div>
 
-        <img className="m-auto" src="./hero.png" alt="hero" />
+            <img className="m-auto" src={`${auctions[0].image}`} alt="hero" />
 
-        <div>
-          <div className="flex xs:flex-col sm:flex-row justify-between xs:items-center sm:items-end sm:pb-2">
-            <p className="text-nouns xs:text-3xl sm:text-5xl">
-              POAP Winners{" "}
-              <span className="text-nouns-grey">Noun {auction}</span>
-            </p>
-            <a
-              className="cursor-pointer text-nouns-blue font-bold transition duration-200 hover:text-nouns-bg-darkblue hover:underline"
-              href="https://nouns.wtf/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Previous Winners -{">"}
-            </a>
-          </div>
+            <div>
+              <div className="flex xs:flex-col sm:flex-row justify-between xs:items-center sm:items-end sm:pb-2">
+                <p className="text-nouns xs:text-3xl sm:text-5xl">
+                  POAP Winners{" "}
+                  <span className="text-nouns-grey">
+                    Noun {auctions[0].auction}
+                  </span>
+                </p>
+                <a
+                  className="cursor-pointer text-nouns-blue font-bold transition duration-200 hover:text-nouns-bg-darkblue hover:underline"
+                  href="https://nouns.wtf/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Previous Winners -{">"}
+                </a>
+              </div>
 
-          <p className="uppercase text-xs xs:pt-6 sm:pt-0">Top 5 Runner-ups</p>
-        </div>
+              <p className="uppercase text-xs xs:pt-6 sm:pt-0">
+                Top 5 Runner-ups
+              </p>
+            </div>
 
-        <div className="xs:mt-2 sm:mt-8">
-          <Bidder num={1} address="cdt.eth" amount={100} />
-          <Bidder num={2} address="0x95..C5EC" amount={99} />
-          <Bidder num={3} address="beautifulpunks.eth" amount={97} />
-          <Bidder num={4} address="0x13...1eb5" amount={86} />
-          <Bidder num={5} address="longling.eth" amount={45} />
-        </div>
+            <div className="xs:mt-2 sm:mt-8">
+              {auctions[0].bids.map((b, idx) => (
+                <Bidder key={uuidv4()} bidder={b} idx={idx} />
+              ))}
+            </div>
+          </>
+        )}
         <p className="text-2xs border-t pt-4">
           POAP Winners automatically receive their badge on{" "}
           <a
@@ -101,7 +112,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
       <Footer dark={false} />
     </div>
   );
