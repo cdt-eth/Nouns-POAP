@@ -4,9 +4,12 @@ import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import { auctionsState } from "../atoms";
 import { useRecoilState } from "recoil";
+import auctionData from "./api/auctions.json";
 
 const Gallery = () => {
   const [auctions, setAuctions] = useRecoilState(auctionsState);
+
+  auctionData && setAuctions(auctionData);
 
   return (
     <div className=" min-h-screen bg-nouns-bg-darkblue">
