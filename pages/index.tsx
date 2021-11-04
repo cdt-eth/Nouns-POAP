@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import { format } from "date-fns";
 import Bidder from "./components/Bidder";
 import Footer from "./components/Footer";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -19,11 +20,11 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="text-center">
+        <div className="text-center sm:-mt-10	">
           <p>{format(new Date(), "PP")}</p>
         </div>
 
-        <img src="./hero.png" alt="hero" />
+        <img className="m-auto" src="./hero.png" alt="hero" />
 
         <div>
           <div className="flex xs:flex-col sm:flex-row justify-between xs:items-center sm:items-end sm:pb-2">
@@ -50,7 +51,7 @@ const Home = () => {
           <Bidder num={4} address="0x13...1eb5" amount={86} />
           <Bidder num={5} address="longling.eth" amount={45} />
         </div>
-        <p className="text-xs border-t pt-4">
+        <p className="text-2xs border-t pt-4">
           POAP Winners automatically receive their badge on{" "}
           <a
             className="cursor-pointer text-nouns-blue transition duration-200 hover:text-nouns-bg-darkblue hover:underline"
@@ -85,14 +86,12 @@ const Home = () => {
                 Each POAP is a 1/1 being hand created by renowned NFT artist
                 David Horvath.
               </p>
-              <a
-                className="cursor-pointer text-nouns-blue font-bold transition duration-200 hover:underline"
-                href="https://nouns.wtf/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Learn More -{">"}
-              </a>
+
+              <Link href="/about">
+                <a className="cursor-pointer text-nouns-blue font-bold transition duration-200 hover:underline">
+                  Learn More -{">"}
+                </a>
+              </Link>
             </div>
           </div>
         </div>

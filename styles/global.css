@@ -16,7 +16,14 @@
 
 .header {
   font-size: 14vw;
-  /* font-size: 170px; */
+}
+
+.text-2xs {
+  font-size: 10px;
+}
+
+.credit:hover {
+  filter: brightness(0);
 }
 
 .card:nth-child(even) {

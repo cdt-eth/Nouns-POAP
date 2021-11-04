@@ -13,7 +13,7 @@ const About = () => {
             project.
           </div>
 
-          <div className="sm:py-8 sm:w-1/2 sm:m-auto text-xl">
+          <div className="sm:pb-4 sm:pt-12 sm:w-1/2 sm:m-auto text-xl">
             <p className="text-dm font-normal xs:pt-4 sm:pt-0 sm:w-10/12 m-auto">
               The Nouns Bidder POAP was created to invite and reward the
               community for actively participating in the proliferation of the
@@ -76,6 +76,7 @@ const About = () => {
                 w-1/2
                 transition
                 duration-200
+                credit
                 "
               >
                 <img src="./twitter.svg" alt="twitter" />
