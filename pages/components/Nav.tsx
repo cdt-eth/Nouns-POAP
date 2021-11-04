@@ -24,13 +24,31 @@ const Nav = ({ dark, gallery }: NavProps) => {
         }`}
       >
         <Link href="/">
-          <a>Home</a>
+          <a
+            className={`cursor-pointer hover:text-black transition duration-200 ${
+              gallery && "hover:text-nouns-yellow "
+            }`}
+          >
+            Home
+          </a>
         </Link>
         <Link href="/about">
-          <a>About</a>
+          <a
+            className={`cursor-pointer hover:text-black transition duration-200 ${
+              gallery && "hover:text-nouns-yellow "
+            }`}
+          >
+            About
+          </a>
         </Link>
         <Link href="/gallery">
-          <a>Gallery</a>
+          <a
+            className={`cursor-pointer hover:text-black transition duration-200 ${
+              gallery && "hover:text-nouns-yellow "
+            }`}
+          >
+            Gallery
+          </a>
         </Link>
       </div>
     </div>

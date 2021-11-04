@@ -14,7 +14,7 @@ const Home = () => {
         <Nav dark={false} />
 
         <div>
-          <p className="text-nouns text-black xs:text-5xl sm:text-9xl header text-center">
+          <p className="text-nouns text-black header text-center">
             Noun 90 POAP
           </p>
         </div>
@@ -34,7 +34,7 @@ const Home = () => {
               className="cursor-pointer text-nouns-blue font-bold"
               href="https://nouns.wtf/"
               target="_blank"
-              ref="noreferrer"
+              rel="noreferrer"
             >
               Previous Winners -{">"}
             </a>
@@ -89,7 +89,7 @@ const Home = () => {
                 className="cursor-pointer text-nouns-blue font-bold transition duration-200 hover:underline"
                 href="https://nouns.wtf/"
                 target="_blank"
-                ref="noreferrer"
+                rel="noreferrer"
               >
                 Learn More -{">"}
               </a>

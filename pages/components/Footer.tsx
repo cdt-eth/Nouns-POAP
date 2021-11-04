@@ -22,26 +22,32 @@ const Footer = ({ dark, gallery }: FooterProps) => {
           `}
     >
       <a
-        className="cursor-pointer hover:text-nouns-blue transition duration-200 hover:underline"
+        className={`cursor-pointer hover:text-nouns-blue transition duration-200 hover:underline ${
+          gallery && "hover:text-white"
+        }`}
         href="https://nouns.wtf"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noreferrer"
       >
         Nouns.wtf
       </a>
       <a
-        className="cursor-pointer hover:text-nouns-blue transition duration-200 hover:underline"
+        className={`cursor-pointer hover:text-nouns-blue transition duration-200 hover:underline ${
+          gallery && "hover:text-white"
+        }`}
         href="https://twitter.com/nounsdao"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noreferrer"
       >
         Twitter
       </a>
       <a
-        className="cursor-pointer hover:text-nouns-blue transition duration-200 hover:underline"
+        className={`cursor-pointer hover:text-nouns-blue transition duration-200 hover:underline ${
+          gallery && "hover:text-white"
+        }`}
         href="https://discord.gg/nouns"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noreferrer"
       >
         Discord
       </a>

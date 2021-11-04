@@ -23,7 +23,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="xs:py-10 sm:py-20">
+      <div className="xs:py-10 sm:py-2">
         <img src="./group.png" alt="" />
       </div>
 

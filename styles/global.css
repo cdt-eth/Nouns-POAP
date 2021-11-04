@@ -15,7 +15,8 @@
 }
 
 .header {
-  font-size: 170px;
+  font-size: 14vw;
+  /* font-size: 170px; */
 }
 
 .card:nth-child(even) {
