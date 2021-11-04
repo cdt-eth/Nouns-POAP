@@ -5,12 +5,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "nouns-bg-blue": "#3E64FF",
         "nouns-bg-grey": "#F2F2F2",
-        "nouns-blue": "#002AFF",
+        "nouns-bg-blue": "#3E64FF",
+        "nouns-bg-darkblue": "#1F1D28",
         "nouns-grey": "#7A7A7A",
+        "nouns-blue": "#002AFF",
         "nouns-yellow": "#FDF45F",
-        "nouns-darkblue": "#1F1D28",
       },
     },
     screens: {

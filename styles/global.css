@@ -13,3 +13,11 @@
 .text-dm {
   font-family: "DM Sans", sans-serif;
 }
+
+.header {
+  font-size: 190px;
+}
+
+.card:nth-child(even) {
+  border-right: 0px;
+}
