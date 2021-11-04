@@ -35,7 +35,13 @@ const Home = () => {
               <p>{format(new Date(), "PP")}</p>
             </div>
 
-            <img className="m-auto" src={`${auctions[0].image}`} alt="hero" />
+            <div className="my-10">
+              <img
+                className="m-auto w-screen	"
+                src={`${auctions[0].image}`}
+                alt="hero"
+              />
+            </div>
 
             <div>
               <div className="flex xs:flex-col sm:flex-row justify-between xs:items-center sm:items-end sm:pb-2">
