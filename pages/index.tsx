@@ -61,9 +61,10 @@ const Home = () => {
             </div>
 
             <div className="xs:mt-2 sm:mt-8">
-              {auctions[0].bids.map((b, idx) => (
-                <Bidder key={uuidv4()} bidder={b} idx={idx} />
-              ))}
+              {auctions[0].bids &&
+                auctions[0].bids.map((b, idx) => (
+                  <Bidder key={uuidv4()} bidder={b} idx={idx} />
+                ))}
             </div>
           </>
         )}
