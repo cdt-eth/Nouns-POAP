@@ -5,8 +5,12 @@ import { format } from "date-fns";
 import Bidder from "./components/Bidder";
 import Footer from "./components/Footer";
 import Link from "next/link";
+import { useRecoilValue } from "recoil";
+import { auctionNumber } from "../atoms";
 
 const Home = () => {
+  const auction = useRecoilValue(auctionNumber);
+
   return (
     <div className="min-h-screen bg-nouns-bg-grey">
       <Header />
@@ -16,7 +20,7 @@ const Home = () => {
 
         <div>
           <p className="text-nouns text-black header text-center">
-            Noun 90 POAP
+            Noun {auction} POAP
           </p>
         </div>
 
@@ -29,10 +33,11 @@ const Home = () => {
         <div>
           <div className="flex xs:flex-col sm:flex-row justify-between xs:items-center sm:items-end sm:pb-2">
             <p className="text-nouns xs:text-3xl sm:text-5xl">
-              POAP Winners <span className="text-nouns-grey">Noun 90</span>
+              POAP Winners{" "}
+              <span className="text-nouns-grey">Noun {auction}</span>
             </p>
             <a
-              className="cursor-pointer text-nouns-blue font-bold"
+              className="cursor-pointer text-nouns-blue font-bold transition duration-200 hover:text-nouns-bg-darkblue hover:underline"
               href="https://nouns.wtf/"
               target="_blank"
               rel="noreferrer"
