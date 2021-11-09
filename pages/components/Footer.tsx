@@ -13,8 +13,10 @@ const Footer = ({ dark, gallery }: FooterProps) => {
           gap-8
           text-nouns
           py-8
-          px-10
+         
+          xs:w-11/12 sm:w-9/12 m-auto
           border-t
+          border-nouns-border
           xs:justify-around
           sm:justify-start
           ${dark && !gallery && "text-white"}

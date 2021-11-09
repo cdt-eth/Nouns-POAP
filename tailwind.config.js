@@ -11,6 +11,7 @@ module.exports = {
         "nouns-grey": "#7A7A7A",
         "nouns-blue": "#002AFF",
         "nouns-yellow": "#FDF45F",
+        "nouns-border": "#C1C1C1",
       },
     },
     screens: {

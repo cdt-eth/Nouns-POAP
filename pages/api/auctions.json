@@ -1,5 +1,31 @@
 [
   {
+    "auction": 96,
+    "image": "./poap96.png",
+    "bids": [
+      {
+        "address": "test1.eth",
+        "amount": 197.49
+      },
+      {
+        "address": "test2.eth",
+        "amount": 185.62
+      },
+      {
+        "address": "0xff...b2f6",
+        "amount": 100.5
+      },
+      {
+        "address": "longling.eth",
+        "amount": 25.69
+      },
+      {
+        "address": "0xaa...a1zz",
+        "amount": 10.5
+      }
+    ]
+  },
+  {
     "auction": 95,
     "image": "./poap.png",
     "bids": [

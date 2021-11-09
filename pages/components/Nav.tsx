@@ -9,7 +9,7 @@ interface NavProps {
 const Nav = ({ dark, gallery }: NavProps) => {
   return (
     <div
-      className={`flex justify-between m-auto border-b ${
+      className={`flex justify-between m-auto border-b border-nouns-border  ${
         gallery && "border-nouns-yellow border-opacity-20"
       } py-4 mb-8`}
     >
