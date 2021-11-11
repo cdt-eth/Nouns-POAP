@@ -38,7 +38,7 @@ const About = () => {
         </div>
 
         <div className="xs:py-10 sm:py-20 ">
-          <img src="./rect.png" alt="react" />
+          <img src="./infographic.png" alt="react" />
         </div>
 
         <div>
