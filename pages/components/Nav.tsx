@@ -4,14 +4,15 @@ import Link from "next/link";
 interface NavProps {
   dark: boolean;
   gallery?: boolean;
+  four?: boolean;
 }
 
-const Nav = ({ dark, gallery }: NavProps) => {
+const Nav = ({ dark, gallery, four }: NavProps) => {
   return (
     <div
-      className={`flex justify-between m-auto border-b border-nouns-border  ${
+      className={`flex justify-between m-auto border-b   ${
         gallery && "border-nouns-yellow border-opacity-20"
-      } py-4 mb-8`}
+      } py-4 mb-8 ${four ? "border-black" : "border-nouns-border"} `}
     >
       <Link href="/">
         <a>
