@@ -27,7 +27,7 @@
   },
   {
     "auction": 95,
-    "image": "./poap.png",
+    "image": "./poap96.png",
     "bids": [
       {
         "address": "subbo.eth",
@@ -45,7 +45,7 @@
   },
   {
     "auction": 94,
-    "image": "",
+    "image": "./poap96.png",
     "bids": [
       {
         "address": "guyzalaxy.eth",
@@ -71,7 +71,7 @@
   },
   {
     "auction": 93,
-    "image": "",
+    "image": "./poap96.png",
     "bids": [
       {
         "address": "0x38...5c26",
@@ -97,7 +97,7 @@
   },
   {
     "auction": 92,
-    "image": "",
+    "image": "./poap96.png",
     "bids": [
       {
         "address": "beautifulpunks.eth",
@@ -123,7 +123,7 @@
   },
   {
     "auction": 91,
-    "image": "",
+    "image": "./poap96.png",
     "bids": [
       {
         "address": "0xea...6e8b",
@@ -145,7 +145,7 @@
   },
   {
     "auction": 89,
-    "image": "",
+    "image": "./poap96.png",
     "bids": [
       {
         "address": "0x6f...d5fd",
@@ -171,7 +171,7 @@
   },
   {
     "auction": 88,
-    "image": "",
+    "image": "./poap96.png",
     "bids": [
       {
         "address": "longling.eth",
@@ -197,7 +197,7 @@
   },
   {
     "auction": 87,
-    "image": "",
+    "image": "./poap96.png",
     "bids": [
       {
         "address": "0xa9...5617",

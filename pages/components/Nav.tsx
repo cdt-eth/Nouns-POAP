@@ -2,26 +2,31 @@ import React from "react";
 import Link from "next/link";
 
 interface NavProps {
-  dark: boolean;
+  about?: boolean;
   gallery?: boolean;
   four?: boolean;
 }
 
-const Nav = ({ dark, gallery, four }: NavProps) => {
+const Nav = ({ about, gallery, four }: NavProps) => {
   return (
     <div
-      className={`flex justify-between m-auto border-b   ${
+      className={`flex justify-between m-auto border-b    py-4 mb-8 ${
+        four ? "border-black" : "border-nouns-border"
+      } ${about && "border-nouns-blue-border"} ${
         gallery && "border-nouns-yellow border-opacity-20"
-      } py-4 mb-8 ${four ? "border-black" : "border-nouns-border"} `}
+      }`}
     >
       <Link href="/">
         <a>
-          <img src={`./${dark ? "Logo_Light" : "Logo"}.svg`} alt="logo" />
+          <img
+            src={`./${about || gallery ? "Logo_Light" : "Logo"}.svg`}
+            alt="logo"
+          />
         </a>
       </Link>
       <div
         className={`flex xs:gap-3 self-center sm:gap-6 text-nouns ${
-          dark ? "text-white" : "text-black"
+          about || gallery ? "text-white" : "text-black"
         }`}
       >
         <Link href="/">

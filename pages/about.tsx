@@ -6,9 +6,9 @@ const About = () => {
   return (
     <div className="min-h-screen bg-nouns-bg-blue text-white">
       <div className="xs:w-11/12 sm:w-9/12 m-auto">
-        <Nav dark={true} />
+        <Nav about />
         <div className="">
-          <div className="text-nouns xs:text-3xl sm:text-6xl sm:w-8/12 leading-tight">
+          <div className="text-nouns font-light xs:text-3xl sm:text-6xl sm:w-8/12 leading-tight xs:mt-10 sm:mt-14">
             Every auction participant, win or lose, shapes, the future of the
             project.
           </div>
@@ -24,7 +24,12 @@ const About = () => {
       </div>
 
       <div className="xs:py-10 sm:py-2">
-        <img src="./group.png" alt="" />
+        <img
+          className="w-full xs:hidden sm:block"
+          src="./group.png"
+          alt="group"
+        />
+        <img className="w-full sm:hidden" src="./group-m.png" alt="group" />
       </div>
 
       <div className="xs:w-11/12 sm:w-9/12 m-auto">
@@ -38,7 +43,7 @@ const About = () => {
         </div>
 
         <div className="xs:py-10 sm:py-20 ">
-          <img src="./infographic.png" alt="react" />
+          <img src="./winner.png" alt="winner" />
         </div>
 
         <div>

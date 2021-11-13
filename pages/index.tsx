@@ -21,7 +21,7 @@ const Home = () => {
     <div className="min-h-screen bg-nouns-bg-grey">
       <Header />
       <div className="xs:w-11/12 sm:w-9/12 m-auto">
-        <Nav dark={false} />
+        <Nav about={false} />
 
         {auctions && (
           <>
@@ -37,7 +37,7 @@ const Home = () => {
 
             <div className="mt-10 mb-16">
               <img
-                className="m-auto w-screen rounded-full hero"
+                className="m-auto w-screen rounded-full shadow-lg hero"
                 src="114.png"
                 // src={`${auctions[0].image}`}
                 alt="hero"

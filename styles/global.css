@@ -82,3 +82,20 @@ p {
     height: auto;
   }
 }
+
+@media only screen and (min-width: 640px) {
+  .card-image {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+  }
+
+  .card-group:hover .card-image {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.card:nth-last-child(2) {
+  border-bottom: 1px solid rgba(253, 244, 95, 0.2);
+}
