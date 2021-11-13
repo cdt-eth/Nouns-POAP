@@ -7,7 +7,7 @@ const Custom404 = () => {
   return (
     <div className="four h-screen bg-nouns-pink ">
       <div className="xs:w-11/12 sm:w-9/12 m-auto">
-        <Nav dark={false} four />
+        <Nav about={false} four />
         <div className="text-center flex flex-col items-center pt-10">
           <img className="mb-10" src="404a.png" alt="404" />
 
