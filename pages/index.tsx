@@ -37,7 +37,7 @@ const Home = () => {
 
             <div className="mt-10 mb-16">
               <img
-                className="m-auto w-screen rounded-full shadow-2xl"
+                className="m-auto w-screen rounded-full hero"
                 src="114.png"
                 // src={`${auctions[0].image}`}
                 alt="hero"
@@ -91,16 +91,7 @@ const Home = () => {
             >
               POAP.xyz
             </a>
-            . To migrate the POAP to mainnet, please visit{" "}
-            <a
-              className="cursor-pointer text-nouns-blue transition duration-200 hover:text-nouns-bg-darkblue hover:underline"
-              href="https://poap.xyz/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              POAP.xyz
-            </a>{" "}
-            and connect the wallet of your bidding address.
+            .
           </div>
         </div>
 

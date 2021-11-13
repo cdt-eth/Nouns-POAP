@@ -66,6 +66,19 @@ p {
 .poap-text {
   color: #3d3d3d;
 }
+
 .line {
   line-height: 1.8;
+}
+
+.hero {
+  width: 500px;
+  height: 500px;
+  border: 10px solid white;
+}
+
+@media only screen and (max-width: 640px) {
+  .hero {
+    height: auto;
+  }
 }
