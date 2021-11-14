@@ -58,17 +58,14 @@ const Home = () => {
                     </a>
                   </span>
                 </p>
-                <a
-                  className="cursor-pointer text-nouns-blue font-bold transition duration-200   xs:hidden sm:block sm:mr-8 arrow"
-                  href="https://nouns.wtf/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {/* <a className="button arrow">Read More</a> */}
-                  {/* <a> */}
-                  Previous Winners
-                  {/* <img src="./Arrow_2.svg" alt="arrow" /> */}
-                </a>
+                <Link href="/gallery">
+                  <a className="cursor-pointer text-nouns-blue font-bold transition duration-200   xs:hidden sm:block sm:mr-8 arrow">
+                    {/* <a className="button arrow">Read More</a> */}
+                    {/* <a> */}
+                    Previous Winners
+                    {/* <img src="./Arrow_2.svg" alt="arrow" /> */}
+                  </a>
+                </Link>
               </div>
 
               <p className="uppercase text-xs date sm:pt-0">Top 5 Runner-ups</p>
