@@ -19,9 +19,11 @@ const Nav = ({ about, gallery, four }: NavProps) => {
       <Link href="/">
         <a>
           <img
+            className="xs:hidden sm:block"
             src={`./${about || gallery ? "Logo_Light" : "Logo"}.svg`}
             alt="logo"
           />
+          <img className="sm:hidden" src={`./nouns-mobile.svg`} alt="logo" />
         </a>
       </Link>
       <div
