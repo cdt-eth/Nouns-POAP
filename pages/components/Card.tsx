@@ -6,6 +6,7 @@ interface CardProps {
 }
 
 const Card = ({ number, bidder }: CardProps) => {
+  console.log("askdjfa", number, bidder);
   return (
     <div className="border-b xs:w-full sm:w-1/2 border-nouns-yellow sm:border-r border-opacity-20 xs:px-2 xs:pl-6 sm:px-16 py-8 card">
       <div className="relative card-group">
@@ -15,9 +16,9 @@ const Card = ({ number, bidder }: CardProps) => {
           rel="noreferrer"
         >
           <img
-            className="sm:absolute m-auto h-52 z-10 card-image sm:cursor-pointer"
-            src="./poap96.png"
-            alt="poap"
+            className="sm:absolute m-auto h-52 z-10 card-image sm:cursor-pointer rounded-full"
+            src={`./beings/n${number}.png`}
+            alt={`poap${number}`}
           />
         </a>
         <div className="text-nouns xs:text-5xl xs:text-center xs:pt-6 sm:pt-0 sm:text-left sm:text-5xl xs:mb-4 sm:mb-10 card-title w-full">

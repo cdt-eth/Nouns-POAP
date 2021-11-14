@@ -38,8 +38,7 @@ const Home = () => {
             <div className="mt-10 mb-16">
               <img
                 className="m-auto rounded-full shadow-lg hero"
-                src="114.png"
-                // src={`${auctions[0].image}`}
+                src={`${auctions[0].image}`}
                 alt="hero"
               />
             </div>
