@@ -10,11 +10,11 @@ interface NavProps {
 const Nav = ({ about, gallery, four }: NavProps) => {
   return (
     <div
-      className={`flex justify-between m-auto border-b    py-4 mb-8 ${
-        four ? "border-black" : "border-nouns-border"
-      } ${about && "border-nouns-blue-border"} ${
-        gallery && "border-nouns-yellow border-opacity-20"
-      }`}
+      className={`flex justify-between m-auto border-b py-4 mb-8
+       ${four ? "border-black" : "border-nouns-border"} 
+       ${about && "border-nouns-blue-border"}
+       ${gallery && "border-nouns-yellow border-opacity-20"}
+       `}
     >
       <Link href="/">
         <a>
@@ -26,25 +26,34 @@ const Nav = ({ about, gallery, four }: NavProps) => {
           <img className="sm:hidden" src={`./nouns-mobile.svg`} alt="logo" />
         </a>
       </Link>
+
       <div
-        className={`flex xs:gap-3 self-center sm:gap-6 text-nouns ${
-          about || gallery ? "text-white" : "text-black"
-        }`}
+        className={`flex xs:gap-3 self-center sm:gap-6 text-nouns
+        ${about || gallery ? "text-white" : "text-black"}
+        `}
       >
         <Link href="/">
           <a
-            className={`cursor-pointer hover:text-black transition duration-200 ${
-              gallery && "hover:text-nouns-yellow "
-            }`}
+            className={`cursor-pointer hover:text-black transition duration-200
+            ${gallery && "hover:text-nouns-yellow opacity-50 hover:opacity-100"}
+            ${about && "opacity-50 hover:opacity-100"}
+            `}
           >
             Home
           </a>
         </Link>
+
         <Link href="/about">
           <a
-            className={`cursor-pointer hover:text-black transition duration-200 ${
-              gallery && "hover:text-nouns-yellow "
-            }`}
+            className={`cursor-pointer hover:text-black transition duration-200
+            ${gallery && "hover:text-nouns-yellow opacity-50 hover:opacity-100"}
+            ${
+              !about &&
+              !gallery &&
+              !four &&
+              "opacity-50 hover:opacity-100 hover:text-white"
+            }
+            `}
           >
             About
           </a>
@@ -53,7 +62,10 @@ const Nav = ({ about, gallery, four }: NavProps) => {
           <a
             className={`cursor-pointer hover:text-black transition duration-200 ${
               gallery && "hover:text-nouns-yellow "
-            }`}
+            }
+              ${about && "opacity-50 hover:opacity-100"}
+              ${!about && !gallery && !four && "opacity-50 hover:opacity-100"}
+            `}
           >
             Gallery
           </a>

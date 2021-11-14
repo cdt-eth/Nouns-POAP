@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-nouns-bg-grey">
       <Header />
-      <div className="xs:w-11/12 sm:w-9/12 m-auto">
+      <div className="xs:w-11/12 sm:w-9/12 m-auto sm:max">
         <Nav about={false} />
 
         {auctions && (
@@ -60,12 +60,15 @@ const Home = () => {
                   </span>
                 </p>
                 <a
-                  className="cursor-pointer text-nouns-blue font-bold transition duration-200 hover:text-nouns-bg-darkblue hover:underline xs:hidden sm:block"
+                  className="cursor-pointer text-nouns-blue font-bold transition duration-200   xs:hidden sm:block sm:mr-8 arrow"
                   href="https://nouns.wtf/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Previous Winners -{">"}
+                  {/* <a className="button arrow">Read More</a> */}
+                  {/* <a> */}
+                  Previous Winners
+                  {/* <img src="./Arrow_2.svg" alt="arrow" /> */}
                 </a>
               </div>
 

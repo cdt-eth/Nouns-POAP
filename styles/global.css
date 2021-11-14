@@ -99,3 +99,35 @@ p {
 .card:nth-last-child(2) {
   border-bottom: 1px solid rgba(253, 244, 95, 0.2);
 }
+
+.arrow {
+  color: #002aff;
+  margin: 1em 0;
+}
+.arrow::after {
+  display: inline-block;
+  padding-left: 8px;
+  content: "\0279E";
+  -webkit-transition: transform 0.3s ease-out;
+  -moz-transition: transform 0.3s ease-out;
+  -ms-transition: transform 0.3s ease-out;
+  -o-transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+
+/* .arrow:hover {
+  /* color: #002aff; */
+/* opacity: 0.7; */
+/* } */
+
+.arrow:hover::after {
+  -webkit-transform: translateX(4px);
+  -moz-transform: translateX(4px);
+  -ms-transform: translateX(4px);
+  -o-transform: translateX(4px);
+  transform: translateX(4px);
+}
+
+.max {
+  max-width: 1440px;
+}
