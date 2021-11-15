@@ -15,8 +15,6 @@ const Home = () => {
 
   auctionData && setAuctions(auctionData);
 
-  const currentAuction = auctions[0].auction;
-
   return (
     <div className="min-h-screen bg-nouns-bg-grey">
       <Header />
@@ -27,7 +25,7 @@ const Home = () => {
           <>
             <div>
               <p className="text-nouns text-black header leading-none	 text-center">
-                Noun {currentAuction} POAP
+                Noun {auctions[0].auction} POAP
               </p>
             </div>
 
@@ -38,7 +36,7 @@ const Home = () => {
             <div className="mt-10 mb-16">
               <img
                 className="m-auto rounded-full shadow-lg hero"
-                src={`./beings/n${currentAuction}.png`}
+                src={`./beings/n${auctions[0].auction}.png`}
                 alt="hero"
               />
             </div>
@@ -49,12 +47,12 @@ const Home = () => {
                   POAP Winners{" "}
                   <span className="text-nouns-grey cursor-pointer">
                     <a
-                      href={`https://nouns.wtf/auction/${currentAuction}`}
+                      href={`https://nouns.wtf/auction/${auctions[0].auction}`}
                       target="_blank"
                       rel="noreferrer"
                       className="hover:text-nouns-blue  transition duration-200"
                     >
-                      Noun {currentAuction}
+                      Noun {auctions[0].auction}
                     </a>
                   </span>
                 </p>
