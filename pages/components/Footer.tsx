@@ -17,8 +17,10 @@ const Footer = ({ dark, gallery }: FooterProps) => {
           border-t
           xs:justify-around
           sm:justify-start
-          ${dark && !gallery && "text-white"}
-          ${gallery && "border-nouns-yellow text-nouns-yellow"}
+          ${dark && !gallery && "text-white border-about"}
+          ${
+            gallery && "border-nouns-yellow text-nouns-yellow border-opacity-20"
+          }
           ${!dark && !gallery && "border-nouns-border"}
           `}
     >

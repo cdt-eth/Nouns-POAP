@@ -5,9 +5,10 @@ interface NavProps {
   about?: boolean;
   gallery?: boolean;
   four?: boolean;
+  home?: boolean;
 }
 
-const Nav = ({ about, gallery, four }: NavProps) => {
+const Nav = ({ home, about, gallery, four }: NavProps) => {
   return (
     <div
       className={`flex justify-between m-auto border-b py-4 mb-8
@@ -34,9 +35,10 @@ const Nav = ({ about, gallery, four }: NavProps) => {
       >
         <Link href="/">
           <a
-            className={`cursor-pointer hover:text-black transition duration-200
+            className={`cursor-pointer hover:text-white transition duration-200
             ${gallery && "hover:text-nouns-yellow opacity-50 hover:opacity-100"}
-            ${about && "opacity-50 hover:opacity-100"}
+            ${about && "opacity-50 hover:opacity-100 hover:text-white"}
+            ${home && "hover:text-black"}
             `}
           >
             Home
@@ -45,7 +47,7 @@ const Nav = ({ about, gallery, four }: NavProps) => {
 
         <Link href="/about">
           <a
-            className={`cursor-pointer hover:text-black transition duration-200
+            className={`cursor-pointer hover:text-white transition duration-200
             ${gallery && "hover:text-nouns-yellow opacity-50 hover:opacity-100"}
             ${
               !about &&
@@ -53,6 +55,7 @@ const Nav = ({ about, gallery, four }: NavProps) => {
               !four &&
               "opacity-50 hover:opacity-100 hover:text-white"
             }
+            ${home && "hover:text-black"}
             `}
           >
             About
@@ -60,11 +63,13 @@ const Nav = ({ about, gallery, four }: NavProps) => {
         </Link>
         <Link href="/gallery">
           <a
-            className={`cursor-pointer hover:text-black transition duration-200 ${
+            className={`cursor-pointer hover:text-white transition duration-200 ${
               gallery && "hover:text-nouns-yellow "
             }
               ${about && "opacity-50 hover:opacity-100"}
               ${!about && !gallery && !four && "opacity-50 hover:opacity-100"}
+              ${home && "hover:text-black"}
+              ${gallery && "text-nouns-yellow"}
             `}
           >
             Gallery

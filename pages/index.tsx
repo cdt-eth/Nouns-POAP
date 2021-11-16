@@ -19,7 +19,7 @@ const Home = () => {
     <div className="min-h-screen bg-nouns-bg-grey">
       <Header />
       <div className="xs:w-11/12 sm:w-9/12 m-auto sm:max">
-        <Nav about={false} />
+        <Nav home about={false} />
 
         {auctions && (
           <>
@@ -58,10 +58,7 @@ const Home = () => {
                 </p>
                 <Link href="/gallery">
                   <a className="cursor-pointer text-nouns-blue font-bold transition duration-200   xs:hidden sm:block sm:mr-8 arrow">
-                    {/* <a className="button arrow">Read More</a> */}
-                    {/* <a> */}
                     Previous Winners
-                    {/* <img src="./Arrow_2.svg" alt="arrow" /> */}
                   </a>
                 </Link>
               </div>
@@ -107,8 +104,8 @@ const Home = () => {
               </p>
 
               <Link href="/about">
-                <a className="cursor-pointer text-nouns-blue font-bold transition duration-200 hover:underline">
-                  Learn More -{">"}
+                <a className="cursor-pointer text-nouns-blue font-bold transition duration-200   xs:hidden sm:block sm:mr-8 arrow">
+                  Learn More
                 </a>
               </Link>
             </div>
