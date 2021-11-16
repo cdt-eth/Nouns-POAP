@@ -38,7 +38,7 @@ const About = () => {
           <div className="text-dm sm:w-1/3 flex-end xs:pt-4 sm:pt-0">
             After each auction, the top 5 runner-ups are airdropped a POAP via
             the xDAI network, which can be migrated to the mainnet using
-            POAP.xyz.x
+            POAP.xyz.
           </div>
         </div>
 

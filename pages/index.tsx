@@ -94,7 +94,7 @@ const Home = () => {
 
         <div className="xs:py-16 sm:py-36">
           <div className="text-nouns xs:text-3xl sm:text-6xl sm:w-8/12 leading-tight">
-            A badge to memoralize participation in the historic Nouns auction.
+            A badge to memorialize participation in the historic Nouns auction.
           </div>
 
           <div className="sm:py-8 sm:w-1/2 sm:m-auto text-base">
