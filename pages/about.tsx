@@ -5,7 +5,7 @@ import Nav from "./components/Nav";
 const About = () => {
   return (
     <div className="min-h-screen bg-nouns-bg-blue text-white">
-      <div className="xs:w-11/12 sm:w-9/12 m-auto  sm:max">
+      <div className="xs:w-11/12 sm:w-full  m-auto maxW">
         <Nav about />
         <div className="">
           <div className="text-nouns font-light xs:text-3xl sm:text-6xl sm:w-8/12 leading-tight xs:mt-10 sm:mt-14">

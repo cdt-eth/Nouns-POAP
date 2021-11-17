@@ -38,7 +38,12 @@ body {
 }
 
 .header {
-  font-size: 13vw;
+  font-size: 216px;
+}
+@media only screen and (max-width: 640px) {
+  .header {
+    font-size: 55px;
+  }
 }
 
 .text-2xs {
@@ -129,8 +134,9 @@ p {
   transform: translateX(4px);
 }
 
-.max {
-  max-width: 1440px;
+.maxW {
+  max-width: 1440px !important;
+  margin: auto;
 }
 
 .border-about {

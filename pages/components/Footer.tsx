@@ -6,6 +6,7 @@ interface FooterProps {
 }
 
 const Footer = ({ dark, gallery }: FooterProps) => {
+  // xs:w-11/12 sm:w-9/12
   return (
     <div
       className={`
@@ -13,7 +14,7 @@ const Footer = ({ dark, gallery }: FooterProps) => {
           gap-8
           text-nouns
           py-8
-          xs:w-11/12 sm:w-9/12 m-auto
+          m-auto
           border-t
           xs:justify-around
           sm:justify-start

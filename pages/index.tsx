@@ -18,13 +18,13 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-nouns-bg-grey">
       <Header />
-      <div className="xs:w-11/12 sm:w-9/12 m-auto sm:max">
+      <div className="maxW xs:w-11/12 sm:w-full m-auto">
         <Nav home about={false} />
 
         {auctions && (
           <>
             <div>
-              <p className="text-nouns text-black header leading-none	 text-center">
+              <p className="text-nouns text-black header leading-none	text-center">
                 Noun {auctions[0].auction} POAP
               </p>
             </div>
@@ -128,8 +128,8 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <Footer dark={false} />
       </div>
-      <Footer dark={false} />
     </div>
   );
 };

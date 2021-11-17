@@ -13,7 +13,7 @@ const Gallery = () => {
 
   return (
     <div className=" min-h-screen bg-nouns-bg-darkblue">
-      <div className="xs:w-11/12 sm:w-9/12 m-auto text-nouns-yellow xs:pb-10 sm:pb-20 sm:max">
+      <div className="xs:w-11/12  sm:w-full  m-auto text-nouns-yellow xs:pb-10 sm:pb-20 maxW">
         <Nav gallery />
         <div className="flex xs:flex-col sm:gap-4 sm:flex-row xs:mb-4 sm:mb-10 xs:text-center">
           <div className="text-nouns header">Gallery</div>
