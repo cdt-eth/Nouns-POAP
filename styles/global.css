@@ -96,8 +96,12 @@ p {
     opacity: 1;
   }
 
-  .card:nth-last-child(2) {
-    border-bottom: 1px solid rgba(253, 244, 95, 0.2);
+  .card:nth-last-child(2):nth-child(odd) {
+    /* border-bottom: 1px solid rgba(253, 244, 95, 0.2); */
+    border-bottom: none;
+  }
+  .card:last-child {
+    border-bottom: none;
   }
 }
 

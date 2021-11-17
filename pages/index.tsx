@@ -56,11 +56,21 @@ const Home = () => {
                     </a>
                   </span>
                 </p>
-                <Link href="/gallery">
+
+                <div className="xs:hidden sm:flex gap-2 sm:cursor-pointer sm:hover:underline transition duration-200">
+                  <Link href="/gallery">
+                    <a className=" text-nouns-blue font-bold ">
+                      Previous Winners
+                    </a>
+                  </Link>
+                  <img src="Arrow_2.svg" alt="arrow" />
+                </div>
+
+                {/* <Link href="/gallery">
                   <a className="cursor-pointer text-nouns-blue font-bold transition duration-200   xs:hidden sm:block sm:mr-8 arrow">
                     Previous Winners
                   </a>
-                </Link>
+                </Link> */}
               </div>
 
               <p className="uppercase text-xs date sm:pt-0">Top 5 Runner-ups</p>
@@ -103,11 +113,18 @@ const Home = () => {
                 David Horvath.
               </p>
 
-              <Link href="/about">
+              <div className="flex gap-2 sm:cursor-pointer sm:hover:underline transition duration-200 ">
+                <Link href="/about">
+                  <a className=" text-nouns-blue font-bold ">Learn More</a>
+                </Link>
+                <img src="Arrow_2.svg" alt="arrow" />
+              </div>
+              {/* <Link href="/about">
                 <a className="cursor-pointer text-nouns-blue font-bold transition duration-200   xs:hidden sm:block sm:mr-8 arrow">
                   Learn More
                 </a>
-              </Link>
+                <img src="Arrow_2.svg" alt="arrow" />
+              </Link> */}
             </div>
           </div>
         </div>
