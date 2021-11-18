@@ -5,7 +5,7 @@ import Nav from "./components/Nav";
 const About = () => {
   return (
     <div className="min-h-screen bg-nouns-bg-blue text-white">
-      <div className="xs:w-11/12 sm:w-full  m-auto maxW">
+      <div className=" w-11/12  m-auto maxW">
         <Nav about />
         <div className="">
           <div className="text-nouns font-light xs:text-3xl sm:text-6xl sm:w-8/12 leading-tight xs:mt-10 sm:mt-14">
@@ -21,18 +21,22 @@ const About = () => {
             </p>
           </div>
         </div>
-      </div>
+        {/* </div> */}
 
-      <div className="xs:py-10 sm:py-2">
-        <img
-          className="w-full xs:hidden sm:block"
-          src="./group.png"
-          alt="group"
-        />
-        <img className="w-full sm:hidden" src="./group-m.png" alt="group" />
-      </div>
+        <div className="xs:py-10 sm:py-2">
+          <img
+            className="w-full xs:hidden sm:block"
+            src="./noungroup.png"
+            alt="group"
+          />
+          <img
+            className="w-full sm:hidden"
+            src="./noungroup-m.png"
+            alt="group"
+          />
+        </div>
 
-      <div className="xs:w-11/12 sm:w-9/12 m-auto  sm:max">
+        {/* <div className="xs:w-11/12 sm:w-9/12 m-auto  sm:max"> */}
         <div className="flex xs:flex-col sm:flex-row justify-between align-center">
           <div className="text-nouns xs:text-5xl sm:text-6xl">How it works</div>
           <div className="text-dm sm:w-1/3 flex-end xs:pt-4 sm:pt-0">
@@ -90,8 +94,8 @@ const About = () => {
             </div>
           </div>
         </div>
+        <Footer dark={true} />
       </div>
-      <Footer dark={true} />
     </div>
   );
 };

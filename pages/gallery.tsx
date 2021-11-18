@@ -13,7 +13,7 @@ const Gallery = () => {
 
   return (
     <div className=" min-h-screen bg-nouns-bg-darkblue">
-      <div className="xs:w-11/12  sm:w-full  m-auto text-nouns-yellow xs:pb-10 sm:pb-20 maxW">
+      <div className=" w-11/12  m-auto text-nouns-yellow xs:pb-10 sm:pb-20 maxW">
         <Nav gallery />
         <div className="flex xs:flex-col sm:gap-4 sm:flex-row xs:mb-4 sm:mb-10 xs:text-center">
           <div className="text-nouns header">Gallery</div>
@@ -22,12 +22,12 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap xs:flex-col sm:flex-row  border-nouns-yellow border-opacity-20 font-bold text-dm sm:border-t">
+        <div className="flex flex-wrap xs:flex-col sm:flex-row  border-nouns-yellow border-opacity-20 font-bold text-dm sm:border-t mb-10">
           {auctions &&
             auctions.map((a) => <Card number={a.auction} bidder={a.bids} />)}
         </div>
+        <Footer dark={true} gallery />
       </div>
-      <Footer dark={true} gallery />
     </div>
   );
 };

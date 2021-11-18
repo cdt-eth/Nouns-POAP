@@ -5,11 +5,11 @@ import Nav from "./components/Nav";
 
 const Custom404 = () => {
   return (
-    <div className="four h-screen bg-nouns-pink ">
-      <div className="xs:w-11/12 sm:w-9/12 m-auto">
+    <div className="four bg-nouns-pink h-screen">
+      <div className="w-11/12  m-auto maxW ">
         <Nav about={false} four />
         <div className="text-center flex flex-col items-center pt-10">
-          <img className="mb-10" src="404a.png" alt="404" />
+          <img className="mb-10 sm:w-8/12" src="404a.png" alt="404" />
 
           <div className="sm:mt-6">
             <p className="text-nouns text-3xl mb-4">Looks like you got lost.</p>
