@@ -8,13 +8,14 @@ const About = () => {
       <div className=" w-11/12  m-auto maxW">
         <Nav about />
         <div className="">
-          <div className="text-nouns font-light xs:text-3xl sm:text-6xl sm:w-8/12 leading-tight xs:mt-10 sm:mt-14">
+          <div className="text-nouns font-light xs:text-3xl sm:text-6xl sm:w-7/12 leading-tight xs:mt-10 sm:mt-14">
             Every auction participant, win or lose, shapes, the future of the
             project.
           </div>
 
-          <div className="sm:pb-4 sm:pt-12 sm:w-1/2 sm:m-auto text-xl">
-            <p className="text-dm font-normal xs:pt-4 sm:pt-0 sm:w-10/12 m-auto">
+          {/* <div className="sm:pb-4 sm:pt-12 sm:w-1/2 sm:m-auto text-xl"> */}
+          <div className="sm:pb-4 sm:pt-12 sm:w-1/3 text-xl">
+            <p className="text-dm font-normal text-base xs:pt-4 sm:pt-0 m-auto">
               The Nouns Bidder POAP was created to invite and reward the
               community for actively participating in the proliferation of the
               Nouns ecosystem.
@@ -37,9 +38,12 @@ const About = () => {
         </div>
 
         {/* <div className="xs:w-11/12 sm:w-9/12 m-auto  sm:max"> */}
-        <div className="flex xs:flex-col sm:flex-row justify-between align-center">
-          <div className="text-nouns xs:text-5xl sm:text-6xl">How it works</div>
-          <div className="text-dm sm:w-1/3 flex-end xs:pt-4 sm:pt-0">
+        {/* <div className="flex xs:flex-col sm:flex-row justify-between align-center"> */}
+        <div className="flex flex-col">
+          <div className="text-nouns xs:text-5xl sm:text-6xl pb-4 ">
+            How it works
+          </div>
+          <div className="text-dm sm:w-1/3  flex-end xs:pt-4 sm:pt-0">
             After each auction, the top 5 runner-ups are airdropped a POAP via
             the xDAI network, which can be migrated to the mainnet using
             POAP.xyz.
@@ -47,7 +51,7 @@ const About = () => {
         </div>
 
         <div className="xs:py-10 sm:py-20 ">
-          <img src="./winner.png" alt="winner" />
+          <img src="./howitworks.png" alt="howitworks" />
         </div>
 
         <div>
