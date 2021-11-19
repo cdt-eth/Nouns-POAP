@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import { auctionsState } from "../atoms";
 import { useRecoilState } from "recoil";
 import auctionData from "./api/auctions.json";
+import { v4 as uuidv4 } from "uuid";
 
 const Gallery = () => {
   const [auctions, setAuctions] = useRecoilState(auctionsState);
@@ -24,7 +25,9 @@ const Gallery = () => {
 
         <div className="flex flex-wrap xs:flex-col sm:flex-row  border-nouns-yellow border-opacity-20 font-bold text-dm sm:border-t mb-10">
           {auctions &&
-            auctions.map((a) => <Card number={a.auction} bidder={a.bids} />)}
+            auctions.map((a) => (
+              <Card key={uuidv4()} number={a.auction} bidder={a.bids} />
+            ))}
         </div>
         <Footer dark={true} gallery />
       </div>

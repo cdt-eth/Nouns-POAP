@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 
 interface CardProps {
   number: number;
@@ -29,7 +30,7 @@ const Card = ({ number, bidder }: CardProps) => {
           {/* </div> */}
           {/* </div> */}
           <div className="text-sm xs:leading-8 sm:leading-loose opacity-75 font-normal text-dm">
-            {bidder && bidder.map((a) => <p> {a.address}</p>)}
+            {bidder && bidder.map((a) => <p key={uuidv4()}> {a.address}</p>)}
           </div>
         </div>
         {/* </div> */}
