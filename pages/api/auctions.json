@@ -3,8 +3,24 @@
     "auction": 115,
     "bids": [
       {
-        "address": "",
-        "amount": null
+        "address": "beautifulpunks.eth",
+        "amount": 64.99
+      },
+      {
+        "address": "0x2f...6445",
+        "amount": 60.0
+      },
+      {
+        "address": "0x39...3630",
+        "amount": 15.0
+      },
+      {
+        "address": "brkfstvault.eth",
+        "amount": 11.11
+      },
+      {
+        "address": "0x89...5eB3",
+        "amount": 2.22
       }
     ]
   }

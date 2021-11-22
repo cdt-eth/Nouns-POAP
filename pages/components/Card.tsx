@@ -29,7 +29,7 @@ const Card = ({ number, bidder }: CardProps) => {
           Noun {number} POAP
           {/* </div> */}
           {/* </div> */}
-          <div className="text-sm xs:leading-8 sm:leading-loose opacity-75 font-normal text-dm">
+          <div className="text-sm xs:leading-8 sm:leading-loose opacity-75 font-normal text-dm sm:pt-4">
             {bidder && bidder.map((a) => <p key={uuidv4()}> {a.address}</p>)}
           </div>
         </div>
