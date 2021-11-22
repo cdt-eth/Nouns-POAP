@@ -2,10 +2,12 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Nav from "./components/Nav";
+import Header from "./components/Header";
 
 const Custom404 = () => {
   return (
     <div className="four bg-nouns-pink h-screen">
+      <Header title="404 | Nouns POAP" />
       <div className="w-11/12  m-auto maxW ">
         <Nav about={false} four />
         <div className="text-center flex flex-col items-center pt-10">

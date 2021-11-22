@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-nouns-bg-grey">
-      <Header />
+      <Header title="Nouns POAP" />
       <div className="maxW w-11/12 m-auto">
         <Nav home about={false} />
 

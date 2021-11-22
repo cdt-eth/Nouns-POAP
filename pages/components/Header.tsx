@@ -1,9 +1,13 @@
 import Head from "next/head";
 
-const Header = () => {
+// interface HeaderProps {
+//   title: string;
+// }
+
+const Header = ({ title }): any => {
   return (
     <Head>
-      <title>Nouns POAP</title>
+      <title>{title}</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
   );

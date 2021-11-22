@@ -6,6 +6,7 @@ import { auctionsState } from "../atoms";
 import { useRecoilState } from "recoil";
 import auctionData from "./api/auctions.json";
 import { v4 as uuidv4 } from "uuid";
+import Header from "./components/Header";
 
 const Gallery = () => {
   const [auctions, setAuctions] = useRecoilState(auctionsState);
@@ -14,6 +15,7 @@ const Gallery = () => {
 
   return (
     <div className=" min-h-screen bg-nouns-bg-darkblue">
+      <Header title="Gallery | Nouns POAP" />
       <div className=" w-11/12  m-auto text-nouns-yellow xs:pb-10 sm:pb-2 maxW">
         <Nav gallery />
         <div className="flex xs:flex-col sm:gap-4 sm:flex-row xs:mb-4 sm:mb-10 xs:text-center">

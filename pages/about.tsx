@@ -1,10 +1,12 @@
 import React from "react";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 import Nav from "./components/Nav";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-nouns-bg-blue text-white">
+      <Header title="About | Nouns POAP" />
       <div className=" w-11/12  m-auto maxW">
         <Nav about />
         <div className="">
