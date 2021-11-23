@@ -3,10 +3,6 @@
     "auction": 116,
     "bids": [
       {
-        "address": "goldy.eth",
-        "amount": 86.66
-      },
-      {
         "address": "0xfc...b608",
         "amount": 84.69
       },
@@ -21,16 +17,16 @@
       {
         "address": "0x2f...6445",
         "amount": 60.0
+      },
+      {
+        "address": "omakasemoney.eth",
+        "amount": 1.0
       }
     ]
   },
   {
     "auction": 115,
     "bids": [
-      {
-        "address": "beautifulpunks.eth",
-        "amount": 64.99
-      },
       {
         "address": "0x2f...6445",
         "amount": 60.0
@@ -46,6 +42,10 @@
       {
         "address": "0x89...5eB3",
         "amount": 2.22
+      },
+      {
+        "address": "0xbB...9061",
+        "amount": 2.0
       }
     ]
   }
