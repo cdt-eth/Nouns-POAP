@@ -1,5 +1,14 @@
 [
   {
+    "auction": 118,
+    "bids": [
+      {
+        "address": "brkfstvault.eth",
+        "amount": 60.0
+      }
+    ]
+  },
+  {
     "auction": 117,
     "bids": [
       {
