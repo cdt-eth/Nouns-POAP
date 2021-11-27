@@ -1,5 +1,30 @@
 [
   {
+    "auction": 120,
+    "bids": [
+      {
+        "address": "0xa1...9b8e",
+        "amount": 50.94
+      },
+      {
+        "address": "johntmeyer.eth",
+        "amount": 49.694
+      },
+      {
+        "address": "0x2f...6445",
+        "amount": 40.49
+      },
+      {
+        "address": "brkfstvault.eth",
+        "amount": 39.69
+      },
+      {
+        "address": "noun12.eth",
+        "amount": 36.69
+      }
+    ]
+  },
+  {
     "auction": 119,
     "bids": [
       {
