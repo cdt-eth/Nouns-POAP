@@ -1,6 +1,31 @@
 [
   {
-    "auction": 120,
+    "auction": 122,
+    "bids": [
+      {
+        "address": "0xf5...4dcf",
+        "amount": 39.93
+      },
+      {
+        "address": "h4x.eth",
+        "amount": 30.69
+      },
+      {
+        "address": "0x0a...ad31",
+        "amount": 30.01
+      },
+      {
+        "address": "0x39...3630",
+        "amount": 20.0
+      },
+      {
+        "address": "longdao.eth",
+        "amount": 18.88
+      }
+    ]
+  },
+  {
+    "auction": 121,
     "bids": [
       {
         "address": "0xa1...9b8e",
@@ -8,7 +33,7 @@
       },
       {
         "address": "johntmeyer.eth",
-        "amount": 49.694
+        "amount": 49.69
       },
       {
         "address": "0x2f...6445",
