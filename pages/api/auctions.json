@@ -1,5 +1,30 @@
 [
   {
+    "auction": 124,
+    "bids": [
+      {
+        "address": "0xd3...319e",
+        "amount": 40.49
+      },
+      {
+        "address": "0x7d...e196",
+        "amount": 38.56
+      },
+      {
+        "address": "brkfstvault.eth",
+        "amount": 33.69
+      },
+      {
+        "address": "noun12.eth",
+        "amount": 29.69
+      },
+      {
+        "address": "0x50...4c61",
+        "amount": 0.85
+      }
+    ]
+  },
+  {
     "auction": 123,
     "bids": [
       {
