@@ -1,5 +1,30 @@
 [
   {
+    "auction": 134,
+    "bids": [
+      {
+        "address": "brkfstvault.eth",
+        "amount": 20.69
+      },
+      {
+        "address": "0xbe...62e7",
+        "amount": 0.15
+      },
+      {
+        "address": "0x1e...8683",
+        "amount": 0.11
+      },
+      {
+        "address": "onvx.eth",
+        "amount": 0.1
+      },
+      {
+        "address": "defidrifter.eth",
+        "amount": 0.04
+      }
+    ]
+  },
+  {
     "auction": 133,
     "bids": [
       {
