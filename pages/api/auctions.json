@@ -1,5 +1,22 @@
 [
   {
+    "auction": 135,
+    "bids": [
+      {
+        "address": "0x74...689c",
+        "amount": 19.0
+      },
+      {
+        "address": "0xd1...2241",
+        "amount": 1.69
+      },
+      {
+        "address": "kwaji.eth",
+        "amount": 1.35
+      }
+    ]
+  },
+  {
     "auction": 134,
     "bids": [
       {
