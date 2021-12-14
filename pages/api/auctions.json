@@ -1,5 +1,30 @@
 [
   {
+    "auction": 139,
+    "bids": [
+      {
+        "address": "0xf2...245e",
+        "amount": 35.72
+      },
+      {
+        "address": "0xd8...89ae",
+        "amount": 32.0
+      },
+      {
+        "address": "apenoun.eth",
+        "amount": 24.59
+      },
+      {
+        "address": "subbo.eth",
+        "amount": 24.1
+      },
+      {
+        "address": "kesef.eth",
+        "amount": 7.25
+      }
+    ]
+  },
+  {
     "auction": 138,
     "bids": [
       {
