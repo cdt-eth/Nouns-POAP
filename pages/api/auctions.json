@@ -1,5 +1,30 @@
 [
   {
+    "auction": 142,
+    "bids": [
+      {
+        "address": "0xd8...89ae",
+        "amount": 33.0
+      },
+      {
+        "address": "noun12.eth",
+        "amount": 26.69
+      },
+      {
+        "address": "bewbrz.eth",
+        "amount": 0.5
+      },
+      {
+        "address": "nandemotoken.eth",
+        "amount": 0.2
+      },
+      {
+        "address": "kesef.eth",
+        "amount": 0.18
+      }
+    ]
+  },
+  {
     "auction": 141,
     "bids": [
       {
