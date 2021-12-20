@@ -1,5 +1,43 @@
 [
   {
+    "auction": 145,
+    "bids": [
+      {
+        "address": "itzler.eth",
+        "amount": 33.69
+      },
+      {
+        "address": "0x94...ebe0",
+        "amount": 33.0
+      },
+      {
+        "address": "beautifulnfts.eth",
+        "amount": 31.86
+      },
+      {
+        "address": "shittybank.eth",
+        "amount": 17.69
+      },
+      {
+        "address": "0x39...3630",
+        "amount": 15.0
+      }
+    ]
+  },
+  {
+    "auction": 144,
+    "bids": [
+      {
+        "address": "0x94...ebe0",
+        "amount": 24.12
+      },
+      {
+        "address": "0xce...bcd6",
+        "amount": 0.8
+      }
+    ]
+  },
+  {
     "auction": 143,
     "bids": [
       {
@@ -20,7 +58,7 @@
       },
       {
         "address": "0x86...6be9",
-        "amount": 0.50
+        "amount": 0.5
       }
     ]
   },
