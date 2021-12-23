@@ -1,5 +1,30 @@
 [
   {
+    "auction": 149,
+    "bids": [
+      {
+        "address": "0x53...66bc",
+        "amount": 47.14
+      },
+      {
+        "address": "0xf2...245e",
+        "amount": 32.54
+      },
+      {
+        "address": "0x94...ebe0",
+        "amount": 31.23
+      },
+      {
+        "address": "0xa9...5617",
+        "amount": 28.88
+      },
+      {
+        "address": "0x6f...8f3e",
+        "amount": 0.73
+      }
+    ]
+  },
+  {
     "auction": 148,
     "bids": [
       {
