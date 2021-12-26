@@ -1,5 +1,30 @@
 [
   {
+    "auction": 152,
+    "bids": [
+      {
+        "address": "0x47...c7e9",
+        "amount": 61.0
+      },
+      {
+        "address": "noun109.eth",
+        "amount": 35.69
+      },
+      {
+        "address": "0xa9...5617",
+        "amount": 28.88
+      },
+      {
+        "address": "kwaji.eth",
+        "amount": 3.16
+      },
+      {
+        "address": "jcwage.eth",
+        "amount": 0.07
+      }
+    ]
+  },
+  {
     "auction": 151,
     "bids": [
       {
