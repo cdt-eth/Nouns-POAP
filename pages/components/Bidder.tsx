@@ -40,7 +40,7 @@ interface BidderProps {
 const Bidder = ({ bidder, idx }: BidderProps) => {
   idx += 1;
 
-  const address = bidder.address;
+  const address = bidder ? bidder.address: '';
   const ens = useReverseENSLookUp(address);
   const shortAddress = address && [address.substr(0, 4), address.substr(38, 4)].join('...');
 
@@ -58,7 +58,7 @@ const Bidder = ({ bidder, idx }: BidderProps) => {
             {ens ? ens: shortAddress}
           </p>
           <p className="xs:w-3/12 sm:w-2/12 text-nouns text-right xs:text-sm sm:text-2xl font-light">
-            {utils.formatEther(BigNumber.from(bidder.amount.toString()))} ETH
+            {utils.formatEther(BigNumber.from(bidder ? bidder.amount.toString(): '0'))} ETH
           </p>
         </>
       )}
