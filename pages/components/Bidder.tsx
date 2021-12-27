@@ -1,16 +1,9 @@
 import React from "react";
-
 import { utils, BigNumber } from 'ethers';
-
-interface BidderProps {
-  bidder: any;
-  idx: number;
-}
-
 import { useEthers } from '@usedapp/core';
 import { useEffect, useState } from 'react';
 
-export const useReverseENSLookUp = (address: string) => {
+const useReverseENSLookUp = (address: string) => {
   const { library } = useEthers();
   const [ens, setEns] = useState<string>();
 
@@ -39,7 +32,10 @@ export const useReverseENSLookUp = (address: string) => {
   return ens;
 };
 
-
+interface BidderProps {
+  bidder: any;
+  idx: number;
+}
 
 const Bidder = ({ bidder, idx }: BidderProps) => {
   idx += 1;
@@ -47,8 +43,6 @@ const Bidder = ({ bidder, idx }: BidderProps) => {
   const address = bidder.address;
   const ens = useReverseENSLookUp(address);
   const shortAddress = address && [address.substr(0, 4), address.substr(38, 4)].join('...');
-
-  console.log(ens);
 
   return (
     <div
@@ -61,7 +55,7 @@ const Bidder = ({ bidder, idx }: BidderProps) => {
             {idx + 1 < 10 ? "0" + idx : idx}
           </p>
           <p className="xs:w-8/12 sm:w-9/12 text-nouns font-light xs:text-xl sm:text-7xl">
-            {ens ? ens : shortAddress}
+            {ens ? ens: shortAddress}
           </p>
           <p className="xs:w-3/12 sm:w-2/12 text-nouns text-right xs:text-sm sm:text-2xl font-light">
             {utils.formatEther(BigNumber.from(bidder.amount))} ETH
