@@ -6,7 +6,6 @@ import Bidder from "./components/Bidder";
 import Footer from "./components/Footer";
 import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
-import { BigNumber } from "ethers";
 
 const Home = () => {
 
