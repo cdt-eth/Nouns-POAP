@@ -85,7 +85,6 @@ const Home = () => {
             settings
           );
           const data = await fetchResponse.json();
-          console.log(data.data.auctions[0].bids);
 
           // Get winning bidder
           const winningBidderAddr = data.data.auctions[0].bidder.id;
@@ -94,12 +93,10 @@ const Home = () => {
           const filteredBidInfo =  data.data.auctions[0].bids.filter((bidInfo: any, id: number) => {
               return bidInfo.bidder.id !== winningBidderAddr;
           });
-          console.log(filteredBidInfo);
 
           // Construct map relating address => highestBidAmount
           const bidMap = new Map<string, number>();
           filteredBidInfo.forEach((bidInfo: any) => {
-            console.log(bidInfo.amount)
             if (bidMap.has(bidInfo.bidder.id)) {
               if (bidMap.get(bidInfo.bidder.id) < Number(bidInfo.amount)) {
                 bidMap.set(bidInfo.bidder.id, Number(bidInfo.amount));
@@ -110,8 +107,6 @@ const Home = () => {
             }
           });
 
-          console.log(bidMap);
-
           // Sort by bid amount and take top 5
           const addressesGettingPOAP =  Array.from(bidMap, ([address, amount]) => ({ address, amount })).sort(
             (firstBidder, secondBidder) => {
@@ -121,8 +116,7 @@ const Home = () => {
 
           setBiddersGettingPOAP(addressesGettingPOAP);
           setIsLoading(false);
-        } catch (err) {
-          console.log(err);
+        } catch {
           console.log("Error fetching POAP wining bidders");
         }
       };
