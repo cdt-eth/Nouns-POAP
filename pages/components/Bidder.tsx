@@ -1,12 +1,54 @@
 import React from "react";
 
+import { utils, BigNumber } from 'ethers';
+
 interface BidderProps {
   bidder: any;
   idx: number;
 }
 
+import { useEthers } from '@usedapp/core';
+import { useEffect, useState } from 'react';
+
+export const useReverseENSLookUp = (address: string) => {
+  const { library } = useEthers();
+  const [ens, setEns] = useState<string>();
+
+  useEffect(() => {
+    let mounted = true;
+    if (address && library) {
+      library
+        .lookupAddress(address)
+        .then(name => {
+          if (!name) return;
+          if (mounted) {
+            setEns(name);
+          }
+        })
+        .catch(error => {
+          console.log(`error resolving reverse ens lookup: `, error);
+        });
+    }
+
+    return () => {
+      setEns('');
+      mounted = false;
+    };
+  }, [address, library]);
+
+  return ens;
+};
+
+
+
 const Bidder = ({ bidder, idx }: BidderProps) => {
   idx += 1;
+
+  const address = bidder.address;
+  const ens = useReverseENSLookUp(address);
+  const shortAddress = address && [address.substr(0, 4), address.substr(38, 4)].join('...');
+
+  console.log(ens);
 
   return (
     <div
@@ -19,10 +61,10 @@ const Bidder = ({ bidder, idx }: BidderProps) => {
             {idx + 1 < 10 ? "0" + idx : idx}
           </p>
           <p className="xs:w-8/12 sm:w-9/12 text-nouns font-light xs:text-xl sm:text-7xl">
-            {bidder.address}
+            {ens ? ens : shortAddress}
           </p>
           <p className="xs:w-3/12 sm:w-2/12 text-nouns text-right xs:text-sm sm:text-2xl font-light">
-            {bidder.amount} ETH
+            {utils.formatEther(BigNumber.from(bidder.amount))} ETH
           </p>
         </>
       )}
