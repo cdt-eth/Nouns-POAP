@@ -6,6 +6,7 @@ import Bidder from "./components/Bidder";
 import Footer from "./components/Footer";
 import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
+import { BigNumber } from "ethers";
 
 const Home = () => {
 
@@ -84,6 +85,7 @@ const Home = () => {
             settings
           );
           const data = await fetchResponse.json();
+          console.log(data.data.auctions[0].bids);
 
           // Get winning bidder
           const winningBidderAddr = data.data.auctions[0].bidder.id;
@@ -92,16 +94,23 @@ const Home = () => {
           const filteredBidInfo =  data.data.auctions[0].bids.filter((bidInfo: any, id: number) => {
               return bidInfo.bidder.id !== winningBidderAddr;
           });
+          console.log(filteredBidInfo);
 
           // Construct map relating address => highestBidAmount
           const bidMap = new Map<string, number>();
           filteredBidInfo.forEach((bidInfo: any) => {
-            if (bidMap.has(bidInfo.bidder.id) && bidMap.get(bidInfo.bidder.id) < bidInfo.amount) {
-              bidMap.set(bidInfo.bidder.id, bidInfo.amount);
-            } else {
-              bidMap.set(bidInfo.bidder.id, bidInfo.amount);
+            console.log(bidInfo.amount)
+            if (bidMap.has(bidInfo.bidder.id)) {
+              if (bidMap.get(bidInfo.bidder.id) < Number(bidInfo.amount)) {
+                bidMap.set(bidInfo.bidder.id, Number(bidInfo.amount));
+              }
+
+            } else { 
+              bidMap.set(bidInfo.bidder.id, Number(bidInfo.amount));
             }
           });
+
+          console.log(bidMap);
 
           // Sort by bid amount and take top 5
           const addressesGettingPOAP =  Array.from(bidMap, ([address, amount]) => ({ address, amount })).sort(

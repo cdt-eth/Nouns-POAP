@@ -58,7 +58,7 @@ const Bidder = ({ bidder, idx }: BidderProps) => {
             {ens ? ens: shortAddress}
           </p>
           <p className="xs:w-3/12 sm:w-2/12 text-nouns text-right xs:text-sm sm:text-2xl font-light">
-            {utils.formatEther(BigNumber.from(bidder.amount))} ETH
+            {utils.formatEther(BigNumber.from(bidder.amount.toString()))} ETH
           </p>
         </>
       )}
