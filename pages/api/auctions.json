@@ -1,5 +1,22 @@
 [
   {
+    "auction": 153,
+    "bids": [
+      {
+        "address": "brkfstvault.eth",
+        "amount": 36.69
+      },
+      {
+        "address": "noun12.eth",
+        "amount": 33.53
+      },
+      {
+        "address": "gmoney.eth",
+        "amount": 27.0
+      }
+    ]
+  },
+  {
     "auction": 152,
     "bids": [
       {
