@@ -8,18 +8,19 @@ import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
 
 const Home = () => {
-
-  const [mostRecentCompletedAuctionId, setMostRecentCompletedAuctionId] = useState(0);
-  const [biddersGettingPOAP, setBiddersGettingPOAP] = useState(new Array<any>());
+  const [mostRecentCompletedAuctionId, setMostRecentCompletedAuctionId] =
+    useState(0);
+  const [biddersGettingPOAP, setBiddersGettingPOAP] = useState(
+    new Array<any>()
+  );
   const [isLoading, setIsLoading] = useState(false);
-
 
   useEffect(() => {
     const getMostRecentAuctionId = async () => {
       const settings = {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           // GraphQL query to get id of settled auction with highest endTime
@@ -28,7 +29,7 @@ const Home = () => {
                 id
               }
             }`,
-        }),  
+        }),
       };
       try {
         setIsLoading(true);
@@ -44,19 +45,18 @@ const Home = () => {
     };
 
     getMostRecentAuctionId();
-
-  },[]);
+  }, []);
 
   useEffect(() => {
     const getBiddersForPOAP = async () => {
-        const settings = {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            // GraphQL query to get all bids for mostRecentlyCompletedAuctionId
-            query: `{
+      const settings = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // GraphQL query to get all bids for mostRecentlyCompletedAuctionId
+          query: `{
               auctions(where: {id: "${mostRecentCompletedAuctionId}"}) {
                 id,
                 bidder {
@@ -71,57 +71,60 @@ const Home = () => {
                 }
               }
              }`,
-          }),  
-        };
+        }),
+      };
 
-        try {
-          if (mostRecentCompletedAuctionId == 0) {
-            return;
+      try {
+        if (mostRecentCompletedAuctionId == 0) {
+          return;
+        }
+
+        const fetchResponse = await fetch(
+          "https://api.thegraph.com/subgraphs/name/nounsdao/nouns-subgraph",
+          settings
+        );
+        const data = await fetchResponse.json();
+        // console.log("data", data.auctions[0].bids);
+        // Get winning bidder
+        const winningBidderAddr = data.data.auctions[0].bidder.id;
+
+        // Filter the winning bidder out of bid info list
+        const filteredBidInfo = data.data.auctions[0].bids.filter(
+          (bidInfo: any, id: number) => {
+            return bidInfo.bidder.id !== winningBidderAddr;
           }
+        );
 
-          const fetchResponse = await fetch(
-            "https://api.thegraph.com/subgraphs/name/nounsdao/nouns-subgraph",
-            settings
-          );
-          const data = await fetchResponse.json();
-
-          // Get winning bidder
-          const winningBidderAddr = data.data.auctions[0].bidder.id;
-
-          // Filter the winning bidder out of bid info list
-          const filteredBidInfo =  data.data.auctions[0].bids.filter((bidInfo: any, id: number) => {
-              return bidInfo.bidder.id !== winningBidderAddr;
-          });
-
-          // Construct map relating address => highestBidAmount
-          const bidMap = new Map<string, number>();
-          filteredBidInfo.forEach((bidInfo: any) => {
-            if (bidMap.has(bidInfo.bidder.id)) {
-              if (bidMap.get(bidInfo.bidder.id) < Number(bidInfo.amount)) {
-                bidMap.set(bidInfo.bidder.id, Number(bidInfo.amount));
-              }
-
-            } else { 
+        // Construct map relating address => highestBidAmount
+        const bidMap = new Map<string, number>();
+        filteredBidInfo.forEach((bidInfo: any) => {
+          if (bidMap.has(bidInfo.bidder.id)) {
+            if (bidMap.get(bidInfo.bidder.id) < Number(bidInfo.amount)) {
               bidMap.set(bidInfo.bidder.id, Number(bidInfo.amount));
             }
-          });
+          } else {
+            bidMap.set(bidInfo.bidder.id, Number(bidInfo.amount));
+          }
+        });
 
-          // Sort by bid amount and take top 5
-          const addressesGettingPOAP =  Array.from(bidMap, ([address, amount]) => ({ address, amount })).sort(
-            (firstBidder, secondBidder) => {
-              return secondBidder.amount - firstBidder.amount
-            }
-          ).slice(0,5);
+        // Sort by bid amount and take top 5
+        const addressesGettingPOAP = Array.from(
+          bidMap,
+          ([address, amount]) => ({ address, amount })
+        )
+          .sort((firstBidder, secondBidder) => {
+            return secondBidder.amount - firstBidder.amount;
+          })
+          .slice(0, 5);
 
-          setBiddersGettingPOAP(addressesGettingPOAP);
-          setIsLoading(false);
-        } catch {
-          console.log("Error fetching POAP wining bidders");
-        }
-      };
-  
-      getBiddersForPOAP();
+        setBiddersGettingPOAP(addressesGettingPOAP);
+        setIsLoading(false);
+      } catch {
+        console.log("Error fetching POAP wining bidders");
+      }
+    };
 
+    getBiddersForPOAP();
   }, [mostRecentCompletedAuctionId]);
 
   return (
@@ -180,7 +183,7 @@ const Home = () => {
             </div>
 
             <div className="xs:mt-6 sm:mt-8">
-              { biddersGettingPOAP && 
+              {biddersGettingPOAP &&
                 biddersGettingPOAP.map((b, idx) => (
                   <Bidder key={uuidv4()} bidder={b} idx={idx} />
                 ))}
