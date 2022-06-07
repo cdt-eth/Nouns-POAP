@@ -38,7 +38,8 @@ const Home = () => {
           settings
         );
         const data = await fetchResponse.json();
-        setMostRecentCompletedAuctionId(data.data.auctions[0].id);
+        // setMostRecentCompletedAuctionId(data.data.auctions[0].id);
+        setMostRecentCompletedAuctionId(296);
       } catch {
         console.log("Error fetching most recent auction");
       }
@@ -142,7 +143,7 @@ const Home = () => {
             </div>
 
             <div className="text-center	date uppercase">
-              <p>{format(new Date(), "PP")}</p>
+              <p>May 4, 2022</p>
             </div>
 
             <div className="mt-10 mb-16">
